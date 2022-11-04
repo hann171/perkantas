@@ -33,17 +33,18 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^3.0.1
+  webview_flutter: ^3.0.4
+  youtube_player_flutter: ^8.1.1
 
 dev_dependencies:
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
+  flutter_native_splash: ^2.2.13
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/logo.png
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -55,8 +56,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
