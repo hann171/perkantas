@@ -32,6 +32,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  get: ^4.6.5
   google_fonts: ^3.0.1
   webview_flutter: ^3.0.4
   youtube_player_flutter: ^8.1.1

@@ -8,10 +8,11 @@ class CardKTB extends StatelessWidget {
   final String description;
   final String buttonText;
   final String imageUrl;
+  final String pageRoute;
   final Color color;
 
-  const CardKTB(
-      this.title, this.description, this.buttonText, this.imageUrl, this.color,
+  const CardKTB(this.title, this.description, this.buttonText, this.imageUrl,
+      this.color, this.pageRoute,
       {super.key});
 
   @override
@@ -49,6 +50,8 @@ class CardKTB extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10)),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(title,
                                 style: bodyExtraBold.copyWith(color: white)),
@@ -61,7 +64,9 @@ class CardKTB extends StatelessWidget {
                               width: double.infinity,
                               // margin: const EdgeInsets.only(top: 48),
                               child: TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, pageRoute);
+                                  },
                                   style: TextButton.styleFrom(
                                       backgroundColor: white,
                                       shape: RoundedRectangleBorder(
