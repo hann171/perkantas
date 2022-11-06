@@ -10,17 +10,19 @@ class Games extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget game1() {
       return Container(
-        height: 151,
+        // height: 151,
         padding: EdgeInsets.symmetric(horizontal: mMargin),
         decoration: BoxDecoration(
-            color: primary, borderRadius: BorderRadius.circular(5)),
+            color: secondary, borderRadius: BorderRadius.circular(5)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Expanded(
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: lMargin),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -30,7 +32,7 @@ class Games extends StatelessWidget {
                     Text(
                         "Gunakan petunjuk untuk memecahkan teka-teki silang. Ketuk kata dan ketik jawabannya.",
                         style: captionRegular.copyWith(color: white)),
-                    SizedBox(height: sMargin),
+                    SizedBox(height: mMargin),
                     SizedBox(
                       height: 36,
                       width: 120,
@@ -56,14 +58,13 @@ class Games extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: lMargin),
-            Container(
-              // height: 141,
-              width: 100,
-              margin: EdgeInsets.only(right: mMargin),
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/woman4.png"))),
+            // SizedBox(width: lMargin),
+            Expanded(
+              child: Image.asset(
+                "assets/images/woman4.png",
+                fit: BoxFit.contain,
+                // width:
+              ),
             )
           ],
         ),
@@ -72,17 +73,19 @@ class Games extends StatelessWidget {
 
     Widget game2() {
       return Container(
-        height: 151,
+        // height: 151,
         padding: EdgeInsets.symmetric(horizontal: mMargin),
         decoration: BoxDecoration(
             color: warning, borderRadius: BorderRadius.circular(5)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Expanded(
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: lMargin),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -92,7 +95,7 @@ class Games extends StatelessWidget {
                     Text(
                         "Ketuk sepasang kotak sekaligus, lihat apakah mereka sama.",
                         style: captionRegular.copyWith(color: white)),
-                    SizedBox(height: sMargin),
+                    SizedBox(height: mMargin),
                     SizedBox(
                       height: 36,
                       width: 120,
@@ -118,13 +121,13 @@ class Games extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: lMargin),
-            Container(
-              // height: 151,
-              width: 160,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/woman5.png"))),
+            // SizedBox(width: lMargin),
+            Expanded(
+              child: Image.asset(
+                "assets/images/woman5.png",
+                fit: BoxFit.fitWidth,
+                // width:
+              ),
             )
           ],
         ),
@@ -138,18 +141,19 @@ class Games extends StatelessWidget {
               pinned: true,
               snap: false,
               floating: false,
-              expandedHeight: 200.0,
+              expandedHeight: 180.0,
               collapsedHeight: 120.0,
               flexibleSpace: Container(
                 color: danger,
                 child: FlexibleSpaceBar(
                   centerTitle: false,
-                  titlePadding: EdgeInsets.only(left: mMargin, bottom: mMargin),
+                  titlePadding:
+                      EdgeInsets.only(left: mMargin, bottom: xsMargin),
                   title: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Flexible(
-                        flex: 6,
+                        flex: 5,
                         child: Container(),
                       ),
                       Flexible(

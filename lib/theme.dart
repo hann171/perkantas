@@ -35,7 +35,7 @@ TextStyle subtitleRegular = const TextStyle(
 );
 TextStyle captionRegular = const TextStyle(
   fontSize: 10,
-  height: 1.1,
+  height: 1.2,
   fontWeight: FontWeight.w400,
 );
 
@@ -52,7 +52,7 @@ TextStyle bodyBold = const TextStyle(
 );
 TextStyle subtitleBold = const TextStyle(
   fontSize: 13,
-  height: 1.1,
+  height: 1.2,
   fontWeight: FontWeight.w700,
 );
 TextStyle captionBold = const TextStyle(

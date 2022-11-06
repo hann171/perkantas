@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:perkantas/theme.dart';
 import 'package:perkantas/views/widgets/card_tahap_ktb.dart';
 
@@ -7,6 +8,20 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DateTime? currentBackPressTime;
+
+    Future<bool> onWillPop() {
+      DateTime now = DateTime.now();
+      if (currentBackPressTime == null ||
+          now.difference(currentBackPressTime!) > const Duration(seconds: 2)) {
+        currentBackPressTime = now;
+        Fluttertoast.showToast(
+            backgroundColor: black2, textColor: white, msg: "Tekan Back 2x");
+        return Future.value(false);
+      }
+      return Future.value(true);
+    }
+
     Widget greeting() {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,7 +108,7 @@ class Home extends StatelessWidget {
                           'Cari Tahu Sekarang',
                           'assets/images/woman2.png',
                           warning,
-                          '/pdkt',
+                          '/injil',
                         ),
                       ),
                       CardKTB(
@@ -102,7 +117,7 @@ class Home extends StatelessWidget {
                         'Lihat Teman Sefrekuensi',
                         'assets/images/woman3.png',
                         secondary,
-                        '/pdkt',
+                        '/pemuridan',
                       ),
                     ],
                   )
@@ -116,21 +131,24 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: white,
-      body: SafeArea(
-          child: Container(
-        margin: EdgeInsets.only(
-            left: screenPadding, right: screenPadding, top: xxlMargin),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            greeting(),
-            SizedBox(height: xlMargin),
-            ayatHafalan(),
-            SizedBox(height: xlMargin),
-            tahapKTB()
-          ],
-        ),
-      )),
+      body: WillPopScope(
+        onWillPop: onWillPop,
+        child: SafeArea(
+            child: Container(
+          margin: EdgeInsets.only(
+              left: screenPadding, right: screenPadding, top: xxlMargin),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              greeting(),
+              SizedBox(height: xlMargin),
+              ayatHafalan(),
+              SizedBox(height: xlMargin),
+              tahapKTB()
+            ],
+          ),
+        )),
+      ),
     );
   }
 }

@@ -398,18 +398,19 @@ class _AboutMeState extends State<AboutMe> {
               pinned: true,
               snap: false,
               floating: false,
-              expandedHeight: 200.0,
+              expandedHeight: 180.0,
               collapsedHeight: 120.0,
               flexibleSpace: Container(
                 color: danger,
                 child: FlexibleSpaceBar(
                   centerTitle: false,
-                  titlePadding: EdgeInsets.only(left: mMargin, bottom: mMargin),
+                  titlePadding:
+                      EdgeInsets.only(left: mMargin, bottom: xsMargin),
                   title: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Flexible(
-                        flex: 7,
+                        flex: 5,
                         child: Container(),
                       ),
                       Flexible(
