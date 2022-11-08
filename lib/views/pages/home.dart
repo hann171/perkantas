@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:perkantas/theme.dart';
@@ -35,38 +36,44 @@ class Home extends StatelessWidget {
 
     Widget ayatHafalan() {
       return Container(
+        // height: 120,
         padding: EdgeInsets.symmetric(horizontal: mMargin),
         decoration: BoxDecoration(
             color: primary, borderRadius: BorderRadius.circular(5)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Expanded(
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: lMargin),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Ayat hafalan hari ini",
+                    AutoSizeText("Ayat hafalan hari ini",
+                        minFontSize: 14,
+                        maxLines: 1,
                         style: subtitleBold.copyWith(color: white)),
                     SizedBox(height: sMargin),
-                    Text(
+                    AutoSizeText(
                         "Ia tidak bersukacita karena ketidakadilan, tetapi ia bersukacita karena kebenaran.",
+                        minFontSize: 6,
+                        maxLines: 3,
                         style: captionRegular.copyWith(color: white)),
                     SizedBox(height: sMargin),
-                    Text("1 Korintus 13:6 TB",
-                        style: captionBold.copyWith(color: white))
+                    AutoSizeText("1 Korintus 13:6 TB",
+                        minFontSize: 9,
+                        style: captionExtraBold.copyWith(color: white))
                   ],
                 ),
               ),
             ),
             SizedBox(width: lMargin),
-            Container(
-              height: 113,
-              width: 84,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/bible.png"))),
+            Image.asset(
+              "assets/images/bible.png",
+              height: 130,
+              // width:
             )
           ],
         ),

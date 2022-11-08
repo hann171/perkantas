@@ -122,7 +122,7 @@ class AboutHim extends StatelessWidget {
               expandedHeight: 180.0,
               collapsedHeight: 120.0,
               flexibleSpace: Container(
-                color: secondary,
+                color: warning,
                 child: FlexibleSpaceBar(
                   centerTitle: false,
                   titlePadding:
@@ -131,12 +131,13 @@ class AboutHim extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Flexible(
-                        flex: 7,
+                        flex: 5,
                         child: Container(),
                       ),
                       Flexible(
                         flex: 1,
-                        child: Text("Siapa DIA?", style: subtitleBold),
+                        child:
+                            Text("Siapa DIA?", style: subtitleBold),
                       ),
                       SizedBox(height: sMargin),
                       Flexible(
@@ -147,7 +148,7 @@ class AboutHim extends StatelessWidget {
                       ),
                     ],
                   ),
-                  background: Container(color: secondary),
+                  background: Container(color: warning),
                 ),
               )),
           SliverPadding(

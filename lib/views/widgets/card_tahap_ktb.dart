@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:perkantas/theme.dart';
 
@@ -18,7 +19,9 @@ class CardKTB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () {},
+        onTap: () {
+          Navigator.pushNamed(context, pageRoute);
+        },
         child: Container(
           height: 320,
           width: 230,
@@ -40,7 +43,7 @@ class CardKTB extends StatelessWidget {
                     child: BackdropFilter(
                       filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
                       child: Container(
-                        width: 230.0,
+                        // width: 230.0,
                         constraints: const BoxConstraints(
                           maxHeight: double.infinity,
                         ),
@@ -53,10 +56,14 @@ class CardKTB extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(title,
+                            AutoSizeText(title,
+                                maxLines: 2,
+                                minFontSize: 14,
                                 style: bodyExtraBold.copyWith(color: white)),
                             SizedBox(height: xsMargin),
-                            Text(description,
+                            AutoSizeText(description,
+                                maxLines: 3,
+                                minFontSize: 9,
                                 style: captionRegular.copyWith(color: white)),
                             SizedBox(height: sMargin),
                             SizedBox(

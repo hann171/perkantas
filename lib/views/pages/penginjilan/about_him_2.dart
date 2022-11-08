@@ -165,7 +165,7 @@ class AboutHim2 extends StatelessWidget {
               expandedHeight: 180.0,
               collapsedHeight: 120.0,
               flexibleSpace: Container(
-                color: secondary,
+                color: warning,
                 child: FlexibleSpaceBar(
                   centerTitle: false,
                   titlePadding:
@@ -174,7 +174,7 @@ class AboutHim2 extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Flexible(
-                        flex: 7,
+                        flex: 5,
                         child: Container(),
                       ),
                       Flexible(
@@ -190,7 +190,7 @@ class AboutHim2 extends StatelessWidget {
                       ),
                     ],
                   ),
-                  background: Container(color: secondary),
+                  background: Container(color: warning),
                 ),
               )),
           SliverPadding(

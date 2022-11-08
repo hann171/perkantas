@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 double screenPadding = 16;
 
@@ -22,47 +23,52 @@ Color black2 = const Color(0xff333333);
 Color grey1 = const Color(0xff808080);
 Color grery2 = const Color(0xffADADAD);
 
-TextStyle h3 = const TextStyle(
+TextStyle h3 = GoogleFonts.karla(
   fontSize: 25,
   height: 1.2,
   fontWeight: FontWeight.w700,
 );
 
-TextStyle subtitleRegular = const TextStyle(
+TextStyle subtitleRegular = GoogleFonts.karla(
   fontSize: 13,
   height: 1.1,
   fontWeight: FontWeight.w400,
 );
-TextStyle captionRegular = const TextStyle(
+TextStyle captionRegular = GoogleFonts.karla(
   fontSize: 10,
   height: 1.2,
   fontWeight: FontWeight.w400,
 );
 
-TextStyle subtitleMedium = const TextStyle(
+TextStyle subtitleMedium = GoogleFonts.karla(
   fontSize: 13,
   height: 1.2,
   fontWeight: FontWeight.w500,
 );
 
-TextStyle bodyBold = const TextStyle(
+TextStyle bodyBold = GoogleFonts.karla(
   fontSize: 16,
   height: 1.2,
   fontWeight: FontWeight.w700,
 );
-TextStyle subtitleBold = const TextStyle(
+TextStyle subtitleBold = GoogleFonts.karla(
   fontSize: 13,
   height: 1.2,
   fontWeight: FontWeight.w700,
 );
-TextStyle captionBold = const TextStyle(
+TextStyle captionBold = GoogleFonts.karla(
   fontSize: 10,
-  height: 1.1,
+  height: 1.2,
   fontWeight: FontWeight.w700,
 );
 
-TextStyle bodyExtraBold = const TextStyle(
+TextStyle bodyExtraBold = GoogleFonts.karla(
   fontSize: 16,
+  height: 1.2,
+  fontWeight: FontWeight.w800,
+);
+TextStyle captionExtraBold = GoogleFonts.karla(
+  fontSize: 10,
   height: 1.2,
   fontWeight: FontWeight.w800,
 );
